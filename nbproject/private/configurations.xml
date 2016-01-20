@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="97">
+  <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
+    <df root="." name="0">
+      <df name="client">
+        <in>client_shared.c</in>
+        <in>client_shared.h</in>
+        <in>pub_client.c</in>
+        <in>sub_client.c</in>
+      </df>
+      <df name="examples">
+        <df name="mysql_log">
+          <in>mysql_log.c</in>
+        </df>
+        <df name="temperature_conversion">
+          <in>main.cpp</in>
+          <in>temperature_conversion.cpp</in>
+          <in>temperature_conversion.h</in>
+        </df>
+      </df>
+      <df name="installer">
+      </df>
+      <df name="lib">
+        <df name="cpp">
+          <in>mosquittopp.cpp</in>
+          <in>mosquittopp.h</in>
+        </df>
+        <in>dummypthread.h</in>
+        <in>logging_mosq.c</in>
+        <in>logging_mosq.h</in>
+        <in>memory_mosq.c</in>
+        <in>memory_mosq.h</in>
+        <in>messages_mosq.c</in>
+        <in>messages_mosq.h</in>
+        <in>mosquitto.c</in>
+        <in>mosquitto.h</in>
+        <in>mosquitto_internal.h</in>
+        <in>mqtt3_protocol.h</in>
+        <in>net_mosq.c</in>
+        <in>net_mosq.h</in>
+        <in>read_handle.c</in>
+        <in>read_handle.h</in>
+        <in>read_handle_client.c</in>
+        <in>read_handle_shared.c</in>
+        <in>send_client_mosq.c</in>
+        <in>send_mosq.c</in>
+        <in>send_mosq.h</in>
+        <in>socks_mosq.c</in>
+        <in>socks_mosq.h</in>
+        <in>srv_mosq.c</in>
+        <in>thread_mosq.c</in>
+        <in>time_mosq.c</in>
+        <in>time_mosq.h</in>
+        <in>tls_mosq.c</in>
+        <in>tls_mosq.h</in>
+        <in>util_mosq.c</in>
+        <in>util_mosq.h</in>
+        <in>will_mosq.c</in>
+        <in>will_mosq.h</in>
+      </df>
+      <df name="logo">
+      </df>
+      <df name="man">
+      </df>
+      <df name="misc">
+        <df name="currentcost">
+          <df name="gnome-panel">
+          </df>
+        </df>
+      </df>
+      <df name="security">
+      </df>
+      <df name="service">
+        <df name="monit">
+        </df>
+        <df name="svscan">
+        </df>
+        <df name="upstart">
+        </df>
+      </df>
+      <df name="src">
+        <df name="db_dump">
+          <in>db_dump.c</in>
+        </df>
+        <in>bridge.c</in>
+        <in>conf.c</in>
+        <in>context.c</in>
+        <in>database.c</in>
+        <in>lib_load.h</in>
+        <in>logging.c</in>
+        <in>loop.c</in>
+        <in>mosquitto.c</in>
+        <in>mosquitto_broker.h</in>
+        <in>mosquitto_passwd.c</in>
+        <in>mosquitto_plugin.h</in>
+        <in>net.c</in>
+        <in>persist.c</in>
+        <in>persist.h</in>
+        <in>read_handle.c</in>
+        <in>read_handle_client.c</in>
+        <in>read_handle_server.c</in>
+        <in>security.c</in>
+        <in>security_default.c</in>
+        <in>send_server.c</in>
+        <in>service.c</in>
+        <in>subs.c</in>
+        <in>sys_tree.c</in>
+        <in>uthash.h</in>
+        <in>websockets.c</in>
+      </df>
+      <df name="test">
+        <df name="broker">
+          <df name="c">
+            <in>08-tls-psk-bridge.c</in>
+            <in>08-tls-psk-pub.c</in>
+            <in>auth_plugin.c</in>
+          </df>
+        </df>
+        <df name="lib">
+          <df name="c">
+            <in>01-con-discon-success.c</in>
+            <in>01-keepalive-pingreq.c</in>
+            <in>01-no-clean-session.c</in>
+            <in>01-unpwd-set.c</in>
+            <in>01-will-set.c</in>
+            <in>01-will-unpwd-set.c</in>
+            <in>02-subscribe-qos0.c</in>
+            <in>02-subscribe-qos1.c</in>
+            <in>02-subscribe-qos2.c</in>
+            <in>02-unsubscribe.c</in>
+            <in>03-publish-b2c-qos1.c</in>
+            <in>03-publish-b2c-qos2.c</in>
+            <in>03-publish-c2b-qos1-disconnect.c</in>
+            <in>03-publish-c2b-qos1-timeout.c</in>
+            <in>03-publish-c2b-qos2-disconnect.c</in>
+            <in>03-publish-c2b-qos2-timeout.c</in>
+            <in>03-publish-c2b-qos2.c</in>
+            <in>03-publish-qos0-no-payload.c</in>
+            <in>03-publish-qos0.c</in>
+            <in>04-retain-qos0.c</in>
+            <in>08-ssl-bad-cacert.c</in>
+            <in>08-ssl-connect-cert-auth-enc.c</in>
+            <in>08-ssl-connect-cert-auth.c</in>
+            <in>08-ssl-connect-no-auth.c</in>
+            <in>08-ssl-fake-cacert.c</in>
+            <in>09-util-topic-matching.c</in>
+            <in>09-util-topic-tokenise.c</in>
+          </df>
+          <df name="cpp">
+            <in>01-con-discon-success.cpp</in>
+            <in>01-keepalive-pingreq.cpp</in>
+            <in>01-no-clean-session.cpp</in>
+            <in>01-unpwd-set.cpp</in>
+            <in>01-will-set.cpp</in>
+            <in>01-will-unpwd-set.cpp</in>
+            <in>02-subscribe-qos0.cpp</in>
+            <in>02-subscribe-qos1.cpp</in>
+            <in>02-subscribe-qos2.cpp</in>
+            <in>02-unsubscribe.cpp</in>
+            <in>03-publish-b2c-qos1.cpp</in>
+            <in>03-publish-b2c-qos2.cpp</in>
+            <in>03-publish-c2b-qos1-disconnect.cpp</in>
+            <in>03-publish-c2b-qos1-timeout.cpp</in>
+            <in>03-publish-c2b-qos2-disconnect.cpp</in>
+            <in>03-publish-c2b-qos2-timeout.cpp</in>
+            <in>03-publish-c2b-qos2.cpp</in>
+            <in>03-publish-qos0-no-payload.cpp</in>
+            <in>03-publish-qos0.cpp</in>
+            <in>04-retain-qos0.cpp</in>
+            <in>08-ssl-bad-cacert.cpp</in>
+            <in>08-ssl-connect-cert-auth-enc.cpp</in>
+            <in>08-ssl-connect-cert-auth.cpp</in>
+            <in>08-ssl-connect-no-auth.cpp</in>
+            <in>08-ssl-fake-cacert.cpp</in>
+            <in>09-util-topic-matching.cpp</in>
+            <in>09-util-topic-tokenise.cpp</in>
+          </df>
+        </df>
+        <df name="ssl">
+          <df name="demoCA">
+          </df>
+          <df name="rootCA">
+          </df>
+          <df name="signingCA">
+          </df>
+        </df>
+        <in>fake_user.c</in>
+        <in>msgsps_common.h</in>
+        <in>msgsps_pub.c</in>
+        <in>msgsps_sub.c</in>
+        <in>packet-gen.c</in>
+        <in>qos.c</in>
+        <in>random_client.c</in>
+      </df>
+      <in>config.h</in>
+    </df>
+  </logicalFolder>
+  <projectmakefile>Makefile</projectmakefile>
+  <confs>
+    <conf name="Default" type="0">
+      <toolsSet>
+        <developmentServer>localhost</developmentServer>
+        <platform>2</platform>
+      </toolsSet>
+      <compile>
+        <compiledirpicklist>
+          <compiledirpicklistitem>.</compiledirpicklistitem>
+          <compiledirpicklistitem>${AUTO_FOLDER}</compiledirpicklistitem>
+        </compiledirpicklist>
+        <compiledir>${AUTO_FOLDER}</compiledir>
+        <compilecommandpicklist>
+          <compilecommandpicklistitem>${MAKE} ${ITEM_NAME}.o</compilecommandpicklistitem>
+          <compilecommandpicklistitem>${AUTO_COMPILE}</compilecommandpicklistitem>
+        </compilecommandpicklist>
+        <compilecommand>${AUTO_COMPILE}</compilecommand>
+      </compile>
+      <dbx_gdbdebugger version="1">
+        <gdb_pathmaps>
+        </gdb_pathmaps>
+        <gdb_interceptlist>
+          <gdbinterceptoptions gdb_all="false" gdb_unhandled="true" gdb_unexpected="true"/>
+        </gdb_interceptlist>
+        <gdb_options>
+          <DebugOptions>
+          </DebugOptions>
+        </gdb_options>
+        <gdb_buildfirst gdb_buildfirst_overriden="false" gdb_buildfirst_old="false"/>
+      </dbx_gdbdebugger>
+      <nativedebugger version="1">
+        <engine>gdb</engine>
+      </nativedebugger>
+      <runprofile version="9">
+        <runcommandpicklist>
+          <runcommandpicklistitem>"${OUTPUT_PATH}"</runcommandpicklistitem>
+        </runcommandpicklist>
+        <runcommand>"${OUTPUT_PATH}"</runcommand>
+        <rundir>.</rundir>
+        <buildfirst>false</buildfirst>
+        <terminal-type>0</terminal-type>
+        <remove-instrumentation>0</remove-instrumentation>
+        <environment>
+        </environment>
+      </runprofile>
+    </conf>
+  </confs>
+</configurationDescriptor>

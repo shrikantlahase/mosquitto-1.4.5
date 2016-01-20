@@ -1,0 +1,74 @@
+set -e; for d in lib client src; do /usr/bin/make -C ${d}; done
+make[1]: Entering directory `/home/aviconn/mosquitto-1.4.5/lib'
+cc -Wall -ggdb -O2  -I. -I.. -I../lib -fPIC -DWITH_TLS -DWITH_TLS_PSK -DWITH_THREADING -DWITH_SOCKS -DWITH_SRV -c mosquitto.c -o mosquitto.o
+cc -Wall -ggdb -O2  -I. -I.. -I../lib -fPIC -DWITH_TLS -DWITH_TLS_PSK -DWITH_THREADING -DWITH_SOCKS -DWITH_SRV -c logging_mosq.c -o logging_mosq.o
+cc -Wall -ggdb -O2  -I. -I.. -I../lib -fPIC -DWITH_TLS -DWITH_TLS_PSK -DWITH_THREADING -DWITH_SOCKS -DWITH_SRV -c memory_mosq.c -o memory_mosq.o
+cc -Wall -ggdb -O2  -I. -I.. -I../lib -fPIC -DWITH_TLS -DWITH_TLS_PSK -DWITH_THREADING -DWITH_SOCKS -DWITH_SRV -c messages_mosq.c -o messages_mosq.o
+cc -Wall -ggdb -O2  -I. -I.. -I../lib -fPIC -DWITH_TLS -DWITH_TLS_PSK -DWITH_THREADING -DWITH_SOCKS -DWITH_SRV -c net_mosq.c -o net_mosq.o
+cc -Wall -ggdb -O2  -I. -I.. -I../lib -fPIC -DWITH_TLS -DWITH_TLS_PSK -DWITH_THREADING -DWITH_SOCKS -DWITH_SRV -c read_handle.c -o read_handle.o
+cc -Wall -ggdb -O2  -I. -I.. -I../lib -fPIC -DWITH_TLS -DWITH_TLS_PSK -DWITH_THREADING -DWITH_SOCKS -DWITH_SRV -c read_handle_client.c -o read_handle_client.o
+cc -Wall -ggdb -O2  -I. -I.. -I../lib -fPIC -DWITH_TLS -DWITH_TLS_PSK -DWITH_THREADING -DWITH_SOCKS -DWITH_SRV -c read_handle_shared.c -o read_handle_shared.o
+cc -Wall -ggdb -O2  -I. -I.. -I../lib -fPIC -DWITH_TLS -DWITH_TLS_PSK -DWITH_THREADING -DWITH_SOCKS -DWITH_SRV -c send_mosq.c -o send_mosq.o
+cc -Wall -ggdb -O2  -I. -I.. -I../lib -fPIC -DWITH_TLS -DWITH_TLS_PSK -DWITH_THREADING -DWITH_SOCKS -DWITH_SRV -c send_client_mosq.c -o send_client_mosq.o
+cc -Wall -ggdb -O2  -I. -I.. -I../lib -fPIC -DWITH_TLS -DWITH_TLS_PSK -DWITH_THREADING -DWITH_SOCKS -DWITH_SRV -c socks_mosq.c -o socks_mosq.o
+cc -Wall -ggdb -O2  -I. -I.. -I../lib -fPIC -DWITH_TLS -DWITH_TLS_PSK -DWITH_THREADING -DWITH_SOCKS -DWITH_SRV -c srv_mosq.c -o srv_mosq.o
+cc -Wall -ggdb -O2  -I. -I.. -I../lib -fPIC -DWITH_TLS -DWITH_TLS_PSK -DWITH_THREADING -DWITH_SOCKS -DWITH_SRV -c thread_mosq.c -o thread_mosq.o
+cc -Wall -ggdb -O2  -I. -I.. -I../lib -fPIC -DWITH_TLS -DWITH_TLS_PSK -DWITH_THREADING -DWITH_SOCKS -DWITH_SRV -c time_mosq.c -o time_mosq.o
+cc -Wall -ggdb -O2  -I. -I.. -I../lib -fPIC -DWITH_TLS -DWITH_TLS_PSK -DWITH_THREADING -DWITH_SOCKS -DWITH_SRV -c tls_mosq.c -o tls_mosq.o
+cc -Wall -ggdb -O2  -I. -I.. -I../lib -fPIC -DWITH_TLS -DWITH_TLS_PSK -DWITH_THREADING -DWITH_SOCKS -DWITH_SRV -c util_mosq.c -o util_mosq.o
+cc -Wall -ggdb -O2  -I. -I.. -I../lib -fPIC -DWITH_TLS -DWITH_TLS_PSK -DWITH_THREADING -DWITH_SOCKS -DWITH_SRV -c will_mosq.c -o will_mosq.o
+cc -shared  -Wl,--version-script=linker.version -Wl,-soname,libmosquitto.so.1 mosquitto.o logging_mosq.o memory_mosq.o messages_mosq.o net_mosq.o read_handle.o read_handle_client.o read_handle_shared.o send_mosq.o send_client_mosq.o socks_mosq.o srv_mosq.o thread_mosq.o time_mosq.o tls_mosq.o util_mosq.o will_mosq.o -o libmosquitto.so.1  -lrt -lssl -lcrypto -lpthread -lcares
+ar cr libmosquitto.a mosquitto.o logging_mosq.o memory_mosq.o messages_mosq.o net_mosq.o read_handle.o read_handle_client.o read_handle_shared.o send_mosq.o send_client_mosq.o socks_mosq.o srv_mosq.o thread_mosq.o time_mosq.o tls_mosq.o util_mosq.o will_mosq.o
+/usr/bin/make -C cpp
+make[2]: Entering directory `/home/aviconn/mosquitto-1.4.5/lib/cpp'
+g++ -Wall -ggdb -O2  -I. -I.. -I../lib  -fPIC -c mosquittopp.cpp -o mosquittopp.o
+g++ -shared  -Wl,-soname,libmosquittopp.so.1 mosquittopp.o -o libmosquittopp.so.1 ../libmosquitto.so.1
+make[2]: Leaving directory `/home/aviconn/mosquitto-1.4.5/lib/cpp'
+make[1]: Leaving directory `/home/aviconn/mosquitto-1.4.5/lib'
+make[1]: Entering directory `/home/aviconn/mosquitto-1.4.5/client'
+cc -c pub_client.c -o pub_client.o -Wall -ggdb -O2  -I../lib -DVERSION="\"1.4.5\"" -DWITH_TLS -DWITH_TLS_PSK -DWITH_SOCKS -DWITH_SRV
+cc -c client_shared.c -o client_shared.o -Wall -ggdb -O2  -I../lib -DVERSION="\"1.4.5\"" -DWITH_TLS -DWITH_TLS_PSK -DWITH_SOCKS -DWITH_SRV
+cc pub_client.o client_shared.o -o mosquitto_pub  -L../lib ../lib/libmosquitto.so.1
+cc -c sub_client.c -o sub_client.o -Wall -ggdb -O2  -I../lib -DVERSION="\"1.4.5\"" -DWITH_TLS -DWITH_TLS_PSK -DWITH_SOCKS -DWITH_SRV
+cc sub_client.o client_shared.o -o mosquitto_sub  -L../lib ../lib/libmosquitto.so.1
+make[1]: Leaving directory `/home/aviconn/mosquitto-1.4.5/client'
+make[1]: Entering directory `/home/aviconn/mosquitto-1.4.5/src'
+cc -Wall -ggdb -O2  -I. -I.. -I../lib  -DVERSION="\"1.4.5\"" -DTIMESTAMP="\"2016-01-02 20:24:37+0530\"" -DWITH_BROKER -DWITH_TLS -DWITH_TLS_PSK -DWITH_UUID -DWITH_BRIDGE -DWITH_PERSISTENCE -DWITH_MEMORY_TRACKING -DWITH_SYS_TREE -DWITH_EC -c mosquitto.c -o mosquitto.o
+cc -Wall -ggdb -O2  -I. -I.. -I../lib  -DVERSION="\"1.4.5\"" -DTIMESTAMP="\"2016-01-02 20:24:37+0530\"" -DWITH_BROKER -DWITH_TLS -DWITH_TLS_PSK -DWITH_UUID -DWITH_BRIDGE -DWITH_PERSISTENCE -DWITH_MEMORY_TRACKING -DWITH_SYS_TREE -DWITH_EC -c bridge.c -o bridge.o
+cc -Wall -ggdb -O2  -I. -I.. -I../lib  -DVERSION="\"1.4.5\"" -DTIMESTAMP="\"2016-01-02 20:24:37+0530\"" -DWITH_BROKER -DWITH_TLS -DWITH_TLS_PSK -DWITH_UUID -DWITH_BRIDGE -DWITH_PERSISTENCE -DWITH_MEMORY_TRACKING -DWITH_SYS_TREE -DWITH_EC -c conf.c -o conf.o
+cc -Wall -ggdb -O2  -I. -I.. -I../lib  -DVERSION="\"1.4.5\"" -DTIMESTAMP="\"2016-01-02 20:24:37+0530\"" -DWITH_BROKER -DWITH_TLS -DWITH_TLS_PSK -DWITH_UUID -DWITH_BRIDGE -DWITH_PERSISTENCE -DWITH_MEMORY_TRACKING -DWITH_SYS_TREE -DWITH_EC -c context.c -o context.o
+cc -Wall -ggdb -O2  -I. -I.. -I../lib  -DVERSION="\"1.4.5\"" -DTIMESTAMP="\"2016-01-02 20:24:37+0530\"" -DWITH_BROKER -DWITH_TLS -DWITH_TLS_PSK -DWITH_UUID -DWITH_BRIDGE -DWITH_PERSISTENCE -DWITH_MEMORY_TRACKING -DWITH_SYS_TREE -DWITH_EC -c database.c -o database.o
+cc -Wall -ggdb -O2  -I. -I.. -I../lib  -DVERSION="\"1.4.5\"" -DTIMESTAMP="\"2016-01-02 20:24:37+0530\"" -DWITH_BROKER -DWITH_TLS -DWITH_TLS_PSK -DWITH_UUID -DWITH_BRIDGE -DWITH_PERSISTENCE -DWITH_MEMORY_TRACKING -DWITH_SYS_TREE -DWITH_EC -c logging.c -o logging.o
+cc -Wall -ggdb -O2  -I. -I.. -I../lib  -DVERSION="\"1.4.5\"" -DTIMESTAMP="\"2016-01-02 20:24:37+0530\"" -DWITH_BROKER -DWITH_TLS -DWITH_TLS_PSK -DWITH_UUID -DWITH_BRIDGE -DWITH_PERSISTENCE -DWITH_MEMORY_TRACKING -DWITH_SYS_TREE -DWITH_EC -c loop.c -o loop.o
+cc -Wall -ggdb -O2  -I. -I.. -I../lib  -DVERSION="\"1.4.5\"" -DTIMESTAMP="\"2016-01-02 20:24:37+0530\"" -DWITH_BROKER -DWITH_TLS -DWITH_TLS_PSK -DWITH_UUID -DWITH_BRIDGE -DWITH_PERSISTENCE -DWITH_MEMORY_TRACKING -DWITH_SYS_TREE -DWITH_EC -c ../lib/memory_mosq.c -o memory_mosq.o
+cc -Wall -ggdb -O2  -I. -I.. -I../lib  -DVERSION="\"1.4.5\"" -DTIMESTAMP="\"2016-01-02 20:24:37+0530\"" -DWITH_BROKER -DWITH_TLS -DWITH_TLS_PSK -DWITH_UUID -DWITH_BRIDGE -DWITH_PERSISTENCE -DWITH_MEMORY_TRACKING -DWITH_SYS_TREE -DWITH_EC -c persist.c -o persist.o
+cc -Wall -ggdb -O2  -I. -I.. -I../lib  -DVERSION="\"1.4.5\"" -DTIMESTAMP="\"2016-01-02 20:24:37+0530\"" -DWITH_BROKER -DWITH_TLS -DWITH_TLS_PSK -DWITH_UUID -DWITH_BRIDGE -DWITH_PERSISTENCE -DWITH_MEMORY_TRACKING -DWITH_SYS_TREE -DWITH_EC -c net.c -o net.o
+cc -Wall -ggdb -O2  -I. -I.. -I../lib  -DVERSION="\"1.4.5\"" -DTIMESTAMP="\"2016-01-02 20:24:37+0530\"" -DWITH_BROKER -DWITH_TLS -DWITH_TLS_PSK -DWITH_UUID -DWITH_BRIDGE -DWITH_PERSISTENCE -DWITH_MEMORY_TRACKING -DWITH_SYS_TREE -DWITH_EC -c ../lib/net_mosq.c -o net_mosq.o
+cc -Wall -ggdb -O2  -I. -I.. -I../lib  -DVERSION="\"1.4.5\"" -DTIMESTAMP="\"2016-01-02 20:24:37+0530\"" -DWITH_BROKER -DWITH_TLS -DWITH_TLS_PSK -DWITH_UUID -DWITH_BRIDGE -DWITH_PERSISTENCE -DWITH_MEMORY_TRACKING -DWITH_SYS_TREE -DWITH_EC -c read_handle.c -o read_handle.o
+cc -Wall -ggdb -O2  -I. -I.. -I../lib  -DVERSION="\"1.4.5\"" -DTIMESTAMP="\"2016-01-02 20:24:37+0530\"" -DWITH_BROKER -DWITH_TLS -DWITH_TLS_PSK -DWITH_UUID -DWITH_BRIDGE -DWITH_PERSISTENCE -DWITH_MEMORY_TRACKING -DWITH_SYS_TREE -DWITH_EC -c read_handle_client.c -o read_handle_client.o
+cc -Wall -ggdb -O2  -I. -I.. -I../lib  -DVERSION="\"1.4.5\"" -DTIMESTAMP="\"2016-01-02 20:24:37+0530\"" -DWITH_BROKER -DWITH_TLS -DWITH_TLS_PSK -DWITH_UUID -DWITH_BRIDGE -DWITH_PERSISTENCE -DWITH_MEMORY_TRACKING -DWITH_SYS_TREE -DWITH_EC -c read_handle_server.c -o read_handle_server.o
+cc -Wall -ggdb -O2  -I. -I.. -I../lib  -DVERSION="\"1.4.5\"" -DTIMESTAMP="\"2016-01-02 20:24:37+0530\"" -DWITH_BROKER -DWITH_TLS -DWITH_TLS_PSK -DWITH_UUID -DWITH_BRIDGE -DWITH_PERSISTENCE -DWITH_MEMORY_TRACKING -DWITH_SYS_TREE -DWITH_EC -c ../lib/read_handle_shared.c -o read_handle_shared.o
+cc -Wall -ggdb -O2  -I. -I.. -I../lib  -DVERSION="\"1.4.5\"" -DTIMESTAMP="\"2016-01-02 20:24:37+0530\"" -DWITH_BROKER -DWITH_TLS -DWITH_TLS_PSK -DWITH_UUID -DWITH_BRIDGE -DWITH_PERSISTENCE -DWITH_MEMORY_TRACKING -DWITH_SYS_TREE -DWITH_EC -c security.c -o security.o
+cc -Wall -ggdb -O2  -I. -I.. -I../lib  -DVERSION="\"1.4.5\"" -DTIMESTAMP="\"2016-01-02 20:24:37+0530\"" -DWITH_BROKER -DWITH_TLS -DWITH_TLS_PSK -DWITH_UUID -DWITH_BRIDGE -DWITH_PERSISTENCE -DWITH_MEMORY_TRACKING -DWITH_SYS_TREE -DWITH_EC -c security_default.c -o security_default.o
+cc -Wall -ggdb -O2  -I. -I.. -I../lib  -DVERSION="\"1.4.5\"" -DTIMESTAMP="\"2016-01-02 20:24:37+0530\"" -DWITH_BROKER -DWITH_TLS -DWITH_TLS_PSK -DWITH_UUID -DWITH_BRIDGE -DWITH_PERSISTENCE -DWITH_MEMORY_TRACKING -DWITH_SYS_TREE -DWITH_EC -c ../lib/send_client_mosq.c -o send_client_mosq.o
+cc -Wall -ggdb -O2  -I. -I.. -I../lib  -DVERSION="\"1.4.5\"" -DTIMESTAMP="\"2016-01-02 20:24:37+0530\"" -DWITH_BROKER -DWITH_TLS -DWITH_TLS_PSK -DWITH_UUID -DWITH_BRIDGE -DWITH_PERSISTENCE -DWITH_MEMORY_TRACKING -DWITH_SYS_TREE -DWITH_EC -c ../lib/send_mosq.c -o send_mosq.o
+cc -Wall -ggdb -O2  -I. -I.. -I../lib  -DVERSION="\"1.4.5\"" -DTIMESTAMP="\"2016-01-02 20:24:37+0530\"" -DWITH_BROKER -DWITH_TLS -DWITH_TLS_PSK -DWITH_UUID -DWITH_BRIDGE -DWITH_PERSISTENCE -DWITH_MEMORY_TRACKING -DWITH_SYS_TREE -DWITH_EC -c send_server.c -o send_server.o
+cc -Wall -ggdb -O2  -I. -I.. -I../lib  -DVERSION="\"1.4.5\"" -DTIMESTAMP="\"2016-01-02 20:24:37+0530\"" -DWITH_BROKER -DWITH_TLS -DWITH_TLS_PSK -DWITH_UUID -DWITH_BRIDGE -DWITH_PERSISTENCE -DWITH_MEMORY_TRACKING -DWITH_SYS_TREE -DWITH_EC -c service.c -o service.o
+cc -Wall -ggdb -O2  -I. -I.. -I../lib  -DVERSION="\"1.4.5\"" -DTIMESTAMP="\"2016-01-02 20:24:37+0530\"" -DWITH_BROKER -DWITH_TLS -DWITH_TLS_PSK -DWITH_UUID -DWITH_BRIDGE -DWITH_PERSISTENCE -DWITH_MEMORY_TRACKING -DWITH_SYS_TREE -DWITH_EC -c subs.c -o subs.o
+cc -Wall -ggdb -O2  -I. -I.. -I../lib  -DVERSION="\"1.4.5\"" -DTIMESTAMP="\"2016-01-02 20:24:37+0530\"" -DWITH_BROKER -DWITH_TLS -DWITH_TLS_PSK -DWITH_UUID -DWITH_BRIDGE -DWITH_PERSISTENCE -DWITH_MEMORY_TRACKING -DWITH_SYS_TREE -DWITH_EC -c sys_tree.c -o sys_tree.o
+cc -Wall -ggdb -O2  -I. -I.. -I../lib  -DVERSION="\"1.4.5\"" -DTIMESTAMP="\"2016-01-02 20:24:37+0530\"" -DWITH_BROKER -DWITH_TLS -DWITH_TLS_PSK -DWITH_UUID -DWITH_BRIDGE -DWITH_PERSISTENCE -DWITH_MEMORY_TRACKING -DWITH_SYS_TREE -DWITH_EC -c ../lib/time_mosq.c -o time_mosq.o
+cc -Wall -ggdb -O2  -I. -I.. -I../lib  -DVERSION="\"1.4.5\"" -DTIMESTAMP="\"2016-01-02 20:24:37+0530\"" -DWITH_BROKER -DWITH_TLS -DWITH_TLS_PSK -DWITH_UUID -DWITH_BRIDGE -DWITH_PERSISTENCE -DWITH_MEMORY_TRACKING -DWITH_SYS_TREE -DWITH_EC -c ../lib/tls_mosq.c -o tls_mosq.o
+cc -Wall -ggdb -O2  -I. -I.. -I../lib  -DVERSION="\"1.4.5\"" -DTIMESTAMP="\"2016-01-02 20:24:37+0530\"" -DWITH_BROKER -DWITH_TLS -DWITH_TLS_PSK -DWITH_UUID -DWITH_BRIDGE -DWITH_PERSISTENCE -DWITH_MEMORY_TRACKING -DWITH_SYS_TREE -DWITH_EC -c ../lib/util_mosq.c -o util_mosq.o
+cc -Wall -ggdb -O2  -I. -I.. -I../lib  -DVERSION="\"1.4.5\"" -DTIMESTAMP="\"2016-01-02 20:24:37+0530\"" -DWITH_BROKER -DWITH_TLS -DWITH_TLS_PSK -DWITH_UUID -DWITH_BRIDGE -DWITH_PERSISTENCE -DWITH_MEMORY_TRACKING -DWITH_SYS_TREE -DWITH_EC -c websockets.c -o websockets.o
+cc -Wall -ggdb -O2  -I. -I.. -I../lib  -DVERSION="\"1.4.5\"" -DTIMESTAMP="\"2016-01-02 20:24:37+0530\"" -DWITH_BROKER -DWITH_TLS -DWITH_TLS_PSK -DWITH_UUID -DWITH_BRIDGE -DWITH_PERSISTENCE -DWITH_MEMORY_TRACKING -DWITH_SYS_TREE -DWITH_EC -c ../lib/will_mosq.c -o will_mosq.o
+cc mosquitto.o bridge.o conf.o context.o database.o logging.o loop.o memory_mosq.o persist.o net.o net_mosq.o read_handle.o read_handle_client.o read_handle_server.o read_handle_shared.o security.o security_default.o send_client_mosq.o send_mosq.o send_server.o service.o subs.o sys_tree.o time_mosq.o tls_mosq.o util_mosq.o websockets.o will_mosq.o -g -o mosquitto  -ldl -lm -lrt -Wl,--dynamic-list=linker.syms -lssl -lcrypto -luuid
+cc -Wall -ggdb -O2  -c mosquitto_passwd.c -o mosquitto_passwd.o
+cc mosquitto_passwd.o -o mosquitto_passwd  -lcrypto
+make[1]: Leaving directory `/home/aviconn/mosquitto-1.4.5/src'
+set -e; for d in man; do /usr/bin/make -C ${d}; done
+make[1]: Entering directory `/home/aviconn/mosquitto-1.4.5/man'
+xsltproc mosquitto.8.xml
+make[1]: xsltproc: Command not found
+make[1]: *** [mosquitto.8] Error 127
+make[1]: Leaving directory `/home/aviconn/mosquitto-1.4.5/man'
+make: *** [docs] Error 2

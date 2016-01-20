@@ -1,0 +1,847 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="97">
+  <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
+    <df root="." name="0">
+      <df name="client">
+        <in>client_shared.c</in>
+        <in>pub_client.c</in>
+        <in>sub_client.c</in>
+      </df>
+      <df name="lib">
+        <df name="cpp">
+          <in>mosquittopp.cpp</in>
+        </df>
+        <in>logging_mosq.c</in>
+        <in>memory_mosq.c</in>
+        <in>messages_mosq.c</in>
+        <in>mosquitto.c</in>
+        <in>net_mosq.c</in>
+        <in>read_handle.c</in>
+        <in>read_handle_client.c</in>
+        <in>read_handle_shared.c</in>
+        <in>send_client_mosq.c</in>
+        <in>send_mosq.c</in>
+        <in>socks_mosq.c</in>
+        <in>srv_mosq.c</in>
+        <in>thread_mosq.c</in>
+        <in>time_mosq.c</in>
+        <in>tls_mosq.c</in>
+        <in>util_mosq.c</in>
+        <in>will_mosq.c</in>
+      </df>
+      <df name="src">
+        <in>bridge.c</in>
+        <in>conf.c</in>
+        <in>context.c</in>
+        <in>database.c</in>
+        <in>logging.c</in>
+        <in>loop.c</in>
+        <in>mosquitto.c</in>
+        <in>mosquitto_passwd.c</in>
+        <in>net.c</in>
+        <in>persist.c</in>
+        <in>read_handle.c</in>
+        <in>read_handle_client.c</in>
+        <in>read_handle_server.c</in>
+        <in>security.c</in>
+        <in>security_default.c</in>
+        <in>send_server.c</in>
+        <in>service.c</in>
+        <in>subs.c</in>
+        <in>sys_tree.c</in>
+        <in>websockets.c</in>
+      </df>
+    </df>
+    <logicalFolder name="ExternalFiles"
+                   displayName="Important Files"
+                   projectFiles="false"
+                   kind="IMPORTANT_FILES_FOLDER">
+      <itemPath>Makefile</itemPath>
+      <itemPath>nbproject/private/launcher.properties</itemPath>
+    </logicalFolder>
+  </logicalFolder>
+  <sourceFolderFilter>^(nbproject)$</sourceFolderFilter>
+  <sourceRootList>
+    <Elem>.</Elem>
+  </sourceRootList>
+  <projectmakefile>Makefile</projectmakefile>
+  <confs>
+    <conf name="Default" type="0">
+      <toolsSet>
+        <compilerSet>default</compilerSet>
+        <dependencyChecking>false</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <flagsDictionary>
+        <element flagsID="0" commonFlags="-O2 -fPIC"/>
+        <element flagsID="1" commonFlags="-ggdb -O2"/>
+        <element flagsID="2" commonFlags="-ggdb -O2 -fPIC"/>
+      </flagsDictionary>
+      <codeAssistance>
+      </codeAssistance>
+      <makefileType>
+        <makeTool>
+          <buildCommandWorkingDir>.</buildCommandWorkingDir>
+          <buildCommand>${MAKE} -f Makefile</buildCommand>
+          <cleanCommand>${MAKE} -f Makefile clean</cleanCommand>
+          <executablePath>src/mosquitto</executablePath>
+          <ccTool>
+            <incDir>
+              <pElem>lib/cpp</pElem>
+              <pElem>lib</pElem>
+              <pElem>lib/lib</pElem>
+            </incDir>
+          </ccTool>
+        </makeTool>
+        <preBuild>
+          <preBuildCommandWorkingDir>.</preBuildCommandWorkingDir>
+          <preBuildCommand></preBuildCommand>
+        </preBuild>
+      </makefileType>
+      <item path="client/client_shared.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="client/pub_client.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="client/sub_client.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <folder path="0/client">
+        <cTool>
+          <incDir>
+            <pElem>lib</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>VERSION="1.4.5"</Elem>
+            <Elem>WITH_SOCKS</Elem>
+            <Elem>WITH_SRV</Elem>
+            <Elem>WITH_TLS</Elem>
+            <Elem>WITH_TLS_PSK</Elem>
+          </preprocessorList>
+        </cTool>
+      </folder>
+      <folder path="0/lib">
+        <cTool>
+          <preprocessorList>
+            <Elem>WITH_TLS</Elem>
+            <Elem>WITH_TLS_PSK</Elem>
+          </preprocessorList>
+        </cTool>
+      </folder>
+      <item path="lib/cpp/mosquittopp.cpp" ex="false" tool="1" flavor2="4">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="lib/logging_mosq.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="2">
+          <incDir>
+            <pElem>lib</pElem>
+            <pElem>.</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>WITH_SOCKS</Elem>
+            <Elem>WITH_SRV</Elem>
+            <Elem>WITH_THREADING</Elem>
+          </preprocessorList>
+        </cTool>
+      </item>
+      <item path="lib/memory_mosq.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src</pElem>
+            <pElem>.</pElem>
+            <pElem>lib</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>TIMESTAMP="2016-01-16 21:09:25+0530"</Elem>
+            <Elem>VERSION="1.4.5"</Elem>
+            <Elem>WITH_BRIDGE</Elem>
+            <Elem>WITH_BROKER</Elem>
+            <Elem>WITH_EC</Elem>
+            <Elem>WITH_MEMORY_TRACKING</Elem>
+            <Elem>WITH_PERSISTENCE</Elem>
+            <Elem>WITH_SYS_TREE</Elem>
+            <Elem>WITH_UUID</Elem>
+          </preprocessorList>
+        </cTool>
+      </item>
+      <item path="lib/messages_mosq.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="2">
+          <incDir>
+            <pElem>lib</pElem>
+            <pElem>.</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>WITH_SOCKS</Elem>
+            <Elem>WITH_SRV</Elem>
+            <Elem>WITH_THREADING</Elem>
+          </preprocessorList>
+        </cTool>
+      </item>
+      <item path="lib/mosquitto.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="2">
+          <incDir>
+            <pElem>lib</pElem>
+            <pElem>.</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>WITH_SOCKS</Elem>
+            <Elem>WITH_SRV</Elem>
+            <Elem>WITH_THREADING</Elem>
+          </preprocessorList>
+        </cTool>
+      </item>
+      <item path="lib/net_mosq.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src</pElem>
+            <pElem>.</pElem>
+            <pElem>lib</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>TIMESTAMP="2016-01-16 21:09:25+0530"</Elem>
+            <Elem>VERSION="1.4.5"</Elem>
+            <Elem>WITH_BRIDGE</Elem>
+            <Elem>WITH_BROKER</Elem>
+            <Elem>WITH_EC</Elem>
+            <Elem>WITH_MEMORY_TRACKING</Elem>
+            <Elem>WITH_PERSISTENCE</Elem>
+            <Elem>WITH_SYS_TREE</Elem>
+            <Elem>WITH_UUID</Elem>
+          </preprocessorList>
+        </cTool>
+      </item>
+      <item path="lib/read_handle.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="2">
+          <incDir>
+            <pElem>lib</pElem>
+            <pElem>.</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>WITH_SOCKS</Elem>
+            <Elem>WITH_SRV</Elem>
+            <Elem>WITH_THREADING</Elem>
+          </preprocessorList>
+        </cTool>
+      </item>
+      <item path="lib/read_handle_client.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="2">
+          <incDir>
+            <pElem>lib</pElem>
+            <pElem>.</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>WITH_SOCKS</Elem>
+            <Elem>WITH_SRV</Elem>
+            <Elem>WITH_THREADING</Elem>
+          </preprocessorList>
+        </cTool>
+      </item>
+      <item path="lib/read_handle_shared.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src</pElem>
+            <pElem>.</pElem>
+            <pElem>lib</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>TIMESTAMP="2016-01-16 21:09:25+0530"</Elem>
+            <Elem>VERSION="1.4.5"</Elem>
+            <Elem>WITH_BRIDGE</Elem>
+            <Elem>WITH_BROKER</Elem>
+            <Elem>WITH_EC</Elem>
+            <Elem>WITH_MEMORY_TRACKING</Elem>
+            <Elem>WITH_PERSISTENCE</Elem>
+            <Elem>WITH_SYS_TREE</Elem>
+            <Elem>WITH_UUID</Elem>
+          </preprocessorList>
+        </cTool>
+      </item>
+      <item path="lib/send_client_mosq.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src</pElem>
+            <pElem>.</pElem>
+            <pElem>lib</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>TIMESTAMP="2016-01-16 21:09:25+0530"</Elem>
+            <Elem>VERSION="1.4.5"</Elem>
+            <Elem>WITH_BRIDGE</Elem>
+            <Elem>WITH_BROKER</Elem>
+            <Elem>WITH_EC</Elem>
+            <Elem>WITH_MEMORY_TRACKING</Elem>
+            <Elem>WITH_PERSISTENCE</Elem>
+            <Elem>WITH_SYS_TREE</Elem>
+            <Elem>WITH_UUID</Elem>
+          </preprocessorList>
+        </cTool>
+      </item>
+      <item path="lib/send_mosq.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src</pElem>
+            <pElem>.</pElem>
+            <pElem>lib</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>TIMESTAMP="2016-01-16 21:09:25+0530"</Elem>
+            <Elem>VERSION="1.4.5"</Elem>
+            <Elem>WITH_BRIDGE</Elem>
+            <Elem>WITH_BROKER</Elem>
+            <Elem>WITH_EC</Elem>
+            <Elem>WITH_MEMORY_TRACKING</Elem>
+            <Elem>WITH_PERSISTENCE</Elem>
+            <Elem>WITH_SYS_TREE</Elem>
+            <Elem>WITH_UUID</Elem>
+          </preprocessorList>
+        </cTool>
+      </item>
+      <item path="lib/socks_mosq.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="2">
+          <incDir>
+            <pElem>lib</pElem>
+            <pElem>.</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>WITH_SOCKS</Elem>
+            <Elem>WITH_SRV</Elem>
+            <Elem>WITH_THREADING</Elem>
+          </preprocessorList>
+        </cTool>
+      </item>
+      <item path="lib/srv_mosq.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="2">
+          <incDir>
+            <pElem>lib</pElem>
+            <pElem>.</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>WITH_SOCKS</Elem>
+            <Elem>WITH_SRV</Elem>
+            <Elem>WITH_THREADING</Elem>
+          </preprocessorList>
+        </cTool>
+      </item>
+      <item path="lib/thread_mosq.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="2">
+          <incDir>
+            <pElem>lib</pElem>
+            <pElem>.</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>WITH_SOCKS</Elem>
+            <Elem>WITH_SRV</Elem>
+            <Elem>WITH_THREADING</Elem>
+          </preprocessorList>
+        </cTool>
+      </item>
+      <item path="lib/time_mosq.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src</pElem>
+            <pElem>.</pElem>
+            <pElem>lib</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>TIMESTAMP="2016-01-16 21:09:25+0530"</Elem>
+            <Elem>VERSION="1.4.5"</Elem>
+            <Elem>WITH_BRIDGE</Elem>
+            <Elem>WITH_BROKER</Elem>
+            <Elem>WITH_EC</Elem>
+            <Elem>WITH_MEMORY_TRACKING</Elem>
+            <Elem>WITH_PERSISTENCE</Elem>
+            <Elem>WITH_SYS_TREE</Elem>
+            <Elem>WITH_UUID</Elem>
+          </preprocessorList>
+        </cTool>
+      </item>
+      <item path="lib/tls_mosq.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src</pElem>
+            <pElem>.</pElem>
+            <pElem>lib</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>TIMESTAMP="2016-01-16 21:09:25+0530"</Elem>
+            <Elem>VERSION="1.4.5"</Elem>
+            <Elem>WITH_BRIDGE</Elem>
+            <Elem>WITH_BROKER</Elem>
+            <Elem>WITH_EC</Elem>
+            <Elem>WITH_MEMORY_TRACKING</Elem>
+            <Elem>WITH_PERSISTENCE</Elem>
+            <Elem>WITH_SYS_TREE</Elem>
+            <Elem>WITH_UUID</Elem>
+          </preprocessorList>
+        </cTool>
+      </item>
+      <item path="lib/util_mosq.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src</pElem>
+            <pElem>.</pElem>
+            <pElem>lib</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>TIMESTAMP="2016-01-16 21:09:25+0530"</Elem>
+            <Elem>VERSION="1.4.5"</Elem>
+            <Elem>WITH_BRIDGE</Elem>
+            <Elem>WITH_BROKER</Elem>
+            <Elem>WITH_EC</Elem>
+            <Elem>WITH_MEMORY_TRACKING</Elem>
+            <Elem>WITH_PERSISTENCE</Elem>
+            <Elem>WITH_SYS_TREE</Elem>
+            <Elem>WITH_UUID</Elem>
+          </preprocessorList>
+        </cTool>
+      </item>
+      <item path="lib/will_mosq.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src</pElem>
+            <pElem>.</pElem>
+            <pElem>lib</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>TIMESTAMP="2016-01-16 21:09:25+0530"</Elem>
+            <Elem>VERSION="1.4.5"</Elem>
+            <Elem>WITH_BRIDGE</Elem>
+            <Elem>WITH_BROKER</Elem>
+            <Elem>WITH_EC</Elem>
+            <Elem>WITH_MEMORY_TRACKING</Elem>
+            <Elem>WITH_PERSISTENCE</Elem>
+            <Elem>WITH_SYS_TREE</Elem>
+            <Elem>WITH_UUID</Elem>
+          </preprocessorList>
+        </cTool>
+      </item>
+      <item path="src/bridge.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src</pElem>
+            <pElem>.</pElem>
+            <pElem>lib</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>TIMESTAMP="2016-01-16 21:09:25+0530"</Elem>
+            <Elem>VERSION="1.4.5"</Elem>
+            <Elem>WITH_BRIDGE</Elem>
+            <Elem>WITH_BROKER</Elem>
+            <Elem>WITH_EC</Elem>
+            <Elem>WITH_MEMORY_TRACKING</Elem>
+            <Elem>WITH_PERSISTENCE</Elem>
+            <Elem>WITH_SYS_TREE</Elem>
+            <Elem>WITH_TLS</Elem>
+            <Elem>WITH_TLS_PSK</Elem>
+            <Elem>WITH_UUID</Elem>
+          </preprocessorList>
+        </cTool>
+      </item>
+      <item path="src/conf.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src</pElem>
+            <pElem>.</pElem>
+            <pElem>lib</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>TIMESTAMP="2016-01-16 21:09:25+0530"</Elem>
+            <Elem>VERSION="1.4.5"</Elem>
+            <Elem>WITH_BRIDGE</Elem>
+            <Elem>WITH_BROKER</Elem>
+            <Elem>WITH_EC</Elem>
+            <Elem>WITH_MEMORY_TRACKING</Elem>
+            <Elem>WITH_PERSISTENCE</Elem>
+            <Elem>WITH_SYS_TREE</Elem>
+            <Elem>WITH_TLS</Elem>
+            <Elem>WITH_TLS_PSK</Elem>
+            <Elem>WITH_UUID</Elem>
+          </preprocessorList>
+        </cTool>
+      </item>
+      <item path="src/context.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src</pElem>
+            <pElem>.</pElem>
+            <pElem>lib</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>TIMESTAMP="2016-01-16 21:09:25+0530"</Elem>
+            <Elem>VERSION="1.4.5"</Elem>
+            <Elem>WITH_BRIDGE</Elem>
+            <Elem>WITH_BROKER</Elem>
+            <Elem>WITH_EC</Elem>
+            <Elem>WITH_MEMORY_TRACKING</Elem>
+            <Elem>WITH_PERSISTENCE</Elem>
+            <Elem>WITH_SYS_TREE</Elem>
+            <Elem>WITH_TLS</Elem>
+            <Elem>WITH_TLS_PSK</Elem>
+            <Elem>WITH_UUID</Elem>
+          </preprocessorList>
+        </cTool>
+      </item>
+      <item path="src/database.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src</pElem>
+            <pElem>.</pElem>
+            <pElem>lib</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>TIMESTAMP="2016-01-16 21:09:25+0530"</Elem>
+            <Elem>VERSION="1.4.5"</Elem>
+            <Elem>WITH_BRIDGE</Elem>
+            <Elem>WITH_BROKER</Elem>
+            <Elem>WITH_EC</Elem>
+            <Elem>WITH_MEMORY_TRACKING</Elem>
+            <Elem>WITH_PERSISTENCE</Elem>
+            <Elem>WITH_SYS_TREE</Elem>
+            <Elem>WITH_TLS</Elem>
+            <Elem>WITH_TLS_PSK</Elem>
+            <Elem>WITH_UUID</Elem>
+          </preprocessorList>
+        </cTool>
+      </item>
+      <item path="src/logging.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src</pElem>
+            <pElem>.</pElem>
+            <pElem>lib</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>TIMESTAMP="2016-01-16 21:09:25+0530"</Elem>
+            <Elem>VERSION="1.4.5"</Elem>
+            <Elem>WITH_BRIDGE</Elem>
+            <Elem>WITH_BROKER</Elem>
+            <Elem>WITH_EC</Elem>
+            <Elem>WITH_MEMORY_TRACKING</Elem>
+            <Elem>WITH_PERSISTENCE</Elem>
+            <Elem>WITH_SYS_TREE</Elem>
+            <Elem>WITH_TLS</Elem>
+            <Elem>WITH_TLS_PSK</Elem>
+            <Elem>WITH_UUID</Elem>
+          </preprocessorList>
+        </cTool>
+      </item>
+      <item path="src/loop.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src</pElem>
+            <pElem>.</pElem>
+            <pElem>lib</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>TIMESTAMP="2016-01-16 21:09:25+0530"</Elem>
+            <Elem>VERSION="1.4.5"</Elem>
+            <Elem>WITH_BRIDGE</Elem>
+            <Elem>WITH_BROKER</Elem>
+            <Elem>WITH_EC</Elem>
+            <Elem>WITH_MEMORY_TRACKING</Elem>
+            <Elem>WITH_PERSISTENCE</Elem>
+            <Elem>WITH_SYS_TREE</Elem>
+            <Elem>WITH_TLS</Elem>
+            <Elem>WITH_TLS_PSK</Elem>
+            <Elem>WITH_UUID</Elem>
+          </preprocessorList>
+        </cTool>
+      </item>
+      <item path="src/mosquitto.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src</pElem>
+            <pElem>.</pElem>
+            <pElem>lib</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>TIMESTAMP="2016-01-16 21:09:25+0530"</Elem>
+            <Elem>VERSION="1.4.5"</Elem>
+            <Elem>WITH_BRIDGE</Elem>
+            <Elem>WITH_BROKER</Elem>
+            <Elem>WITH_EC</Elem>
+            <Elem>WITH_MEMORY_TRACKING</Elem>
+            <Elem>WITH_PERSISTENCE</Elem>
+            <Elem>WITH_SYS_TREE</Elem>
+            <Elem>WITH_TLS</Elem>
+            <Elem>WITH_TLS_PSK</Elem>
+            <Elem>WITH_UUID</Elem>
+          </preprocessorList>
+        </cTool>
+      </item>
+      <item path="src/mosquitto_passwd.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+        </cTool>
+      </item>
+      <item path="src/net.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src</pElem>
+            <pElem>.</pElem>
+            <pElem>lib</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>TIMESTAMP="2016-01-16 21:09:25+0530"</Elem>
+            <Elem>VERSION="1.4.5"</Elem>
+            <Elem>WITH_BRIDGE</Elem>
+            <Elem>WITH_BROKER</Elem>
+            <Elem>WITH_EC</Elem>
+            <Elem>WITH_MEMORY_TRACKING</Elem>
+            <Elem>WITH_PERSISTENCE</Elem>
+            <Elem>WITH_SYS_TREE</Elem>
+            <Elem>WITH_TLS</Elem>
+            <Elem>WITH_TLS_PSK</Elem>
+            <Elem>WITH_UUID</Elem>
+          </preprocessorList>
+        </cTool>
+      </item>
+      <item path="src/persist.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src</pElem>
+            <pElem>.</pElem>
+            <pElem>lib</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>TIMESTAMP="2016-01-16 21:09:25+0530"</Elem>
+            <Elem>VERSION="1.4.5"</Elem>
+            <Elem>WITH_BRIDGE</Elem>
+            <Elem>WITH_BROKER</Elem>
+            <Elem>WITH_EC</Elem>
+            <Elem>WITH_MEMORY_TRACKING</Elem>
+            <Elem>WITH_PERSISTENCE</Elem>
+            <Elem>WITH_SYS_TREE</Elem>
+            <Elem>WITH_TLS</Elem>
+            <Elem>WITH_TLS_PSK</Elem>
+            <Elem>WITH_UUID</Elem>
+          </preprocessorList>
+        </cTool>
+      </item>
+      <item path="src/read_handle.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src</pElem>
+            <pElem>.</pElem>
+            <pElem>lib</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>TIMESTAMP="2016-01-16 21:09:25+0530"</Elem>
+            <Elem>VERSION="1.4.5"</Elem>
+            <Elem>WITH_BRIDGE</Elem>
+            <Elem>WITH_BROKER</Elem>
+            <Elem>WITH_EC</Elem>
+            <Elem>WITH_MEMORY_TRACKING</Elem>
+            <Elem>WITH_PERSISTENCE</Elem>
+            <Elem>WITH_SYS_TREE</Elem>
+            <Elem>WITH_TLS</Elem>
+            <Elem>WITH_TLS_PSK</Elem>
+            <Elem>WITH_UUID</Elem>
+          </preprocessorList>
+        </cTool>
+      </item>
+      <item path="src/read_handle_client.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src</pElem>
+            <pElem>.</pElem>
+            <pElem>lib</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>TIMESTAMP="2016-01-16 21:09:25+0530"</Elem>
+            <Elem>VERSION="1.4.5"</Elem>
+            <Elem>WITH_BRIDGE</Elem>
+            <Elem>WITH_BROKER</Elem>
+            <Elem>WITH_EC</Elem>
+            <Elem>WITH_MEMORY_TRACKING</Elem>
+            <Elem>WITH_PERSISTENCE</Elem>
+            <Elem>WITH_SYS_TREE</Elem>
+            <Elem>WITH_TLS</Elem>
+            <Elem>WITH_TLS_PSK</Elem>
+            <Elem>WITH_UUID</Elem>
+          </preprocessorList>
+        </cTool>
+      </item>
+      <item path="src/read_handle_server.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src</pElem>
+            <pElem>.</pElem>
+            <pElem>lib</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>TIMESTAMP="2016-01-16 21:09:25+0530"</Elem>
+            <Elem>VERSION="1.4.5"</Elem>
+            <Elem>WITH_BRIDGE</Elem>
+            <Elem>WITH_BROKER</Elem>
+            <Elem>WITH_EC</Elem>
+            <Elem>WITH_MEMORY_TRACKING</Elem>
+            <Elem>WITH_PERSISTENCE</Elem>
+            <Elem>WITH_SYS_TREE</Elem>
+            <Elem>WITH_TLS</Elem>
+            <Elem>WITH_TLS_PSK</Elem>
+            <Elem>WITH_UUID</Elem>
+          </preprocessorList>
+        </cTool>
+      </item>
+      <item path="src/security.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src</pElem>
+            <pElem>.</pElem>
+            <pElem>lib</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>TIMESTAMP="2016-01-16 21:09:25+0530"</Elem>
+            <Elem>VERSION="1.4.5"</Elem>
+            <Elem>WITH_BRIDGE</Elem>
+            <Elem>WITH_BROKER</Elem>
+            <Elem>WITH_EC</Elem>
+            <Elem>WITH_MEMORY_TRACKING</Elem>
+            <Elem>WITH_PERSISTENCE</Elem>
+            <Elem>WITH_SYS_TREE</Elem>
+            <Elem>WITH_TLS</Elem>
+            <Elem>WITH_TLS_PSK</Elem>
+            <Elem>WITH_UUID</Elem>
+          </preprocessorList>
+        </cTool>
+      </item>
+      <item path="src/security_default.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src</pElem>
+            <pElem>.</pElem>
+            <pElem>lib</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>TIMESTAMP="2016-01-16 21:09:25+0530"</Elem>
+            <Elem>VERSION="1.4.5"</Elem>
+            <Elem>WITH_BRIDGE</Elem>
+            <Elem>WITH_BROKER</Elem>
+            <Elem>WITH_EC</Elem>
+            <Elem>WITH_MEMORY_TRACKING</Elem>
+            <Elem>WITH_PERSISTENCE</Elem>
+            <Elem>WITH_SYS_TREE</Elem>
+            <Elem>WITH_TLS</Elem>
+            <Elem>WITH_TLS_PSK</Elem>
+            <Elem>WITH_UUID</Elem>
+          </preprocessorList>
+        </cTool>
+      </item>
+      <item path="src/send_server.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src</pElem>
+            <pElem>.</pElem>
+            <pElem>lib</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>TIMESTAMP="2016-01-16 21:09:25+0530"</Elem>
+            <Elem>VERSION="1.4.5"</Elem>
+            <Elem>WITH_BRIDGE</Elem>
+            <Elem>WITH_BROKER</Elem>
+            <Elem>WITH_EC</Elem>
+            <Elem>WITH_MEMORY_TRACKING</Elem>
+            <Elem>WITH_PERSISTENCE</Elem>
+            <Elem>WITH_SYS_TREE</Elem>
+            <Elem>WITH_TLS</Elem>
+            <Elem>WITH_TLS_PSK</Elem>
+            <Elem>WITH_UUID</Elem>
+          </preprocessorList>
+        </cTool>
+      </item>
+      <item path="src/service.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src</pElem>
+            <pElem>.</pElem>
+            <pElem>lib</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>TIMESTAMP="2016-01-16 21:09:25+0530"</Elem>
+            <Elem>VERSION="1.4.5"</Elem>
+            <Elem>WITH_BRIDGE</Elem>
+            <Elem>WITH_BROKER</Elem>
+            <Elem>WITH_EC</Elem>
+            <Elem>WITH_MEMORY_TRACKING</Elem>
+            <Elem>WITH_PERSISTENCE</Elem>
+            <Elem>WITH_SYS_TREE</Elem>
+            <Elem>WITH_TLS</Elem>
+            <Elem>WITH_TLS_PSK</Elem>
+            <Elem>WITH_UUID</Elem>
+          </preprocessorList>
+        </cTool>
+      </item>
+      <item path="src/subs.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src</pElem>
+            <pElem>.</pElem>
+            <pElem>lib</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>TIMESTAMP="2016-01-16 21:09:25+0530"</Elem>
+            <Elem>VERSION="1.4.5"</Elem>
+            <Elem>WITH_BRIDGE</Elem>
+            <Elem>WITH_BROKER</Elem>
+            <Elem>WITH_EC</Elem>
+            <Elem>WITH_MEMORY_TRACKING</Elem>
+            <Elem>WITH_PERSISTENCE</Elem>
+            <Elem>WITH_SYS_TREE</Elem>
+            <Elem>WITH_TLS</Elem>
+            <Elem>WITH_TLS_PSK</Elem>
+            <Elem>WITH_UUID</Elem>
+          </preprocessorList>
+        </cTool>
+      </item>
+      <item path="src/sys_tree.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src</pElem>
+            <pElem>.</pElem>
+            <pElem>lib</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>TIMESTAMP="2016-01-16 21:09:25+0530"</Elem>
+            <Elem>VERSION="1.4.5"</Elem>
+            <Elem>WITH_BRIDGE</Elem>
+            <Elem>WITH_BROKER</Elem>
+            <Elem>WITH_EC</Elem>
+            <Elem>WITH_MEMORY_TRACKING</Elem>
+            <Elem>WITH_PERSISTENCE</Elem>
+            <Elem>WITH_SYS_TREE</Elem>
+            <Elem>WITH_TLS</Elem>
+            <Elem>WITH_TLS_PSK</Elem>
+            <Elem>WITH_UUID</Elem>
+          </preprocessorList>
+        </cTool>
+      </item>
+      <item path="src/websockets.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="1">
+          <incDir>
+            <pElem>src</pElem>
+            <pElem>.</pElem>
+            <pElem>lib</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>TIMESTAMP="2016-01-16 21:09:25+0530"</Elem>
+            <Elem>VERSION="1.4.5"</Elem>
+            <Elem>WITH_BRIDGE</Elem>
+            <Elem>WITH_BROKER</Elem>
+            <Elem>WITH_EC</Elem>
+            <Elem>WITH_MEMORY_TRACKING</Elem>
+            <Elem>WITH_PERSISTENCE</Elem>
+            <Elem>WITH_SYS_TREE</Elem>
+            <Elem>WITH_TLS</Elem>
+            <Elem>WITH_TLS_PSK</Elem>
+            <Elem>WITH_UUID</Elem>
+          </preprocessorList>
+        </cTool>
+      </item>
+    </conf>
+  </confs>
+</configurationDescriptor>
