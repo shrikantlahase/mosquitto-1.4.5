@@ -11,9 +11,13 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/home/aviconn/mosquitto-1.4.5/src/read_handle_server.c</file>
+            <file>file:/home/aviconn/mosquitto-1.4.5/src/database.c</file>
             <file>file:/home/aviconn/mosquitto-1.4.5/src/loop.c</file>
-            <file>file:/home/aviconn/mosquitto-1.4.5/src/logging.c</file>
+            <file>file:/home/aviconn/mosquitto-1.4.5/src/mosquitto.c</file>
+            <file>file:/home/aviconn/mosquitto-1.4.5/lib/read_handle_shared.c</file>
+            <file>file:/home/aviconn/mosquitto-1.4.5/lib/mosquitto.h</file>
             <file>file:/home/aviconn/mosquitto-1.4.5/lib/net_mosq.c</file>
+            <file>file:/home/aviconn/mosquitto-1.4.5/src/read_handle.c</file>
         </group>
     </open-files>
 </project-private>
